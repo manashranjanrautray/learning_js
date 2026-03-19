@@ -81,3 +81,21 @@ if (true) {
 //let tempLet = "I am a temporal dead zone variable";
 //console.log(tempConst); // This will throw an error: ReferenceError: Cannot access 'tempConst' before initialization, because tempConst is in the temporal dead zone until it is declared and initialized.
 //const tempConst = "I am a temporal dead zone variable";
+
+//Explain "Use Strict" mode
+// "Use Strict" mode is a way to opt in to a restricted variant of JavaScript, which can help catch common coding mistakes and "unsafe" actions such as assigning values to undeclared variables. It can be enabled by adding the string "use strict"; at the beginning of a script or a function. In strict mode, certain actions that are normally allowed in JavaScript will throw errors, which can help developers identify and fix issues in their code more easily. For example, in strict mode, assigning a value to an undeclared variable will throw a ReferenceError, whereas in non-strict mode it would create a global variable. Additionally, strict mode prevents the use of certain keywords as variable names and disallows duplicate parameter names in functions.
+//  Overall, using strict mode can lead to more robust and maintainable code by enforcing better coding practices and catching potential errors early on.
+// Example of using strict mode
+"use strict";
+// This will throw an error: ReferenceError: undeclaredVar is not defined, because strict mode does not allow the use of undeclared variables.
+//undeclaredVar = "I am an undeclared variable";
+// This will throw an error: SyntaxError: Identifier 'let' has already been declared, because strict mode does not allow the use of reserved keywords as variable names.   
+//let let = "I am a variable named let";
+// This will throw an error: SyntaxError: Identifier 'const' has already been declared, because strict mode does not allow the use of reserved keywords as variable names.   
+//const const = "I am a variable named const";
+// This will throw an error: SyntaxError: Duplicate parameter name not allowed in this context, because strict mode does not allow duplicate parameter names in functions.
+//function duplicateParams(a, a) {
+//    return a;
+//}
+    
+

@@ -94,5 +94,24 @@ console.log(Number.isNaN(NaN)); // Output: true, because NaN is the only value t
 console.log(Number.isNaN("hello")); // Output: false, because "hello" is not NaN, even though it cannot be converted to a number
 console.log(Number.isNaN(123)); // Output: false, because 123 is not NaN, even though it can be converted to a number
 
-    
+//Explain Type conversion in JavaScript with examples
+// Type conversion, also known as type coercion, is the process of converting a value from one type to another. In JavaScript, type conversion can happen implicitly (automatically
+//by the JavaScript engine) or explicitly (manually by the developer). Here are some examples of both implicit and explicit type conversion in JavaScript:    
+// Implicit type conversion
+let implicitString = "The answer is " + 42;
+console.log(implicitString); // Output: "The answer is 42", because the number 42 is implicitly converted to a string and concatenated with the other string.
+let implicitNumber = "5" * 2;
+console.log(implicitNumber); // Output: 10, because the string "5" is implicitly converted to a number and multiplied by 2.
+let implicitBoolean = 0 || "Hello";
+console.log(implicitBoolean); // Output: "Hello", because 0 is a falsy value, so the || operator returns the second operand, which is "Hello".
+// Explicit type conversion
+let explicitString = String(123);
+console.log(explicitString); // Output: "123", because the number 123 is explicitly converted to a string using the String() function.
+let explicitNumber = Number("456");
+console.log(explicitNumber);// Output: 456, because the string "456" is explicitly converted to a number using the Number() function.      
+let explicitBoolean = Boolean(0);
+console.log(explicitBoolean); // Output: false, because the number 0 is explicitly converted to a boolean using the Boolean() function, and 0 is a falsy value. 
+// In summary, type conversion in JavaScript can happen implicitly or explicitly, and it allows values to be converted from one type to another. Implicit type conversion is performed automatically by the JavaScript engine, while explicit type conversion is done manually by the developer using functions like String(), Number(), and Boolean(). Understanding how type conversion works can help prevent unexpected behavior in your code and improve its readability.
+
+
 

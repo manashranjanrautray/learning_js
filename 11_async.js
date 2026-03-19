@@ -65,14 +65,29 @@ let mappedNumbers = numbers.map(num => num * 2);
 console.log(mappedNumbers);// Output: [2, 4, 6, 8, 10]
 let reducedNumber = numbers.reduce((acc, num) => acc + num, 0);
 console.log(reducedNumber); // Output: 15
-// Iterators and Generators
+
+// Explain Iterators and Generators in JavaScript
+//iterators are objects that allow you to traverse through a collection of data, such as an array or a string.
+// They have a next() method that returns an object with two properties: value (the current value) and done (a boolean indicating whether the iteration is complete).
+// Generators are a special type of function that can be paused and resumed, allowing you to create iterators in a more concise way. 
+// They use the function* syntax and the yield keyword to produce values one at a time.
+// Iterators using Symbol.iterator
+let myArray = [1, 2, 3];    
+let iterator = myArray[Symbol.iterator]();
+console.log(iterator.next()); // Output: { value: 1, done: false }
+console.log(iterator.next()); // Output: { value: 2, done: false }
+console.log(iterator.next()); // Output: { value: 3, done: false }
+console.log(iterator.next()); // Output: { value: undefined, done: true }
+// Generators 
 function* generatorFunction() {
     yield 1;
     yield 2;
     yield 3;
 }
 let generator = generatorFunction();
-console.log(generator.next().value); // Output: 1
-console.log(generator.next().value); // Output: 2
-console.log(generator.next().value); // Output: 3
-// This code demonstrates various concepts of asynchronous JavaScript, including callback functions, promises, async/await, arrow functions, sets and maps, filter/map/reduce functions, and iterators/generators. Each section provides examples to illustrate how these concepts work in practice. 
+console.log(generator.next()); // Output: { value: 1, done: false }
+console.log(generator.next()); // Output: { value: 2, done: false }
+console.log(generator.next()); // Output: { value: 3, done: false }
+console.log(generator.next()); // Output: { value: undefined, done: true }
+
+
