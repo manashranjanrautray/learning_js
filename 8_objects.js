@@ -137,3 +137,16 @@ console.log(person2.name); // Output: Bob
 person1.greet(); // Output: Hello, my name is Alice
 person2.greet(); // Output: Hello, my name is Bob
 // In this example, the 'Person' function is a constructor that initializes the 'name', 'age', and 'greet' properties for each new instance of 'Person'. By using the 'new' keyword, we create two separate objects, 'person1' and 'person2', each with their own properties and methods.   
+//Nested objects and accessing nested properties
+let company = {
+    name: "Tech Co.",
+    address: {  
+        street: "123 Main St",
+        city: "Anytown",
+        state: "CA"
+    }
+};
+console.log(company.name); // Output: Tech Co.
+console.log(company.address.street); // Output: 123 Main St
+console.log(company.address.city); // Output: Anytown
+console.log(company.address.state); // Output: CA

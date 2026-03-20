@@ -1,6 +1,6 @@
 /**
- * When you declare a variable with var,
- * it belongs to the current function scope, or the global scope if declared outside any function
+ * When you declare a variable with var, it belongs to the current function scope.
+ * or the global scope if declared outside any function.
 . It ignores block boundaries like if statements or for loops.
  */
 //Example of global scope with var
@@ -8,7 +8,7 @@ var globalVar = "I am a global variable";
 
 function exampleFunction() {
     console.log(globalVar);
-    globalVar = "I am a new global variable"; // This will create a global variable if not declared with var, let, or const
+    globalVar = "I am a new global variable";
     console.log(globalVar); // Output: I am a global variable
 }
 exampleFunction();
