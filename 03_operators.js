@@ -14,14 +14,14 @@ console.log(a / b); // Output: 2 (Division)
 console.log(a % b); // Output: 0 (Modulus)
 console.log(a ** b); // Output: 100000 (Exponentiation)
 // Comparison Operators
-console.log(a == b); // Output: false (Equal to)
-console.log(a != b); // Output: true (Not equal to)
-console.log(a === b); // Output: false (Strict equal to)
-console.log(a !== b); // Output: true (Strict not equal to)
-console.log(a > b); // Output: true (Greater than)
-console.log(a < b); // Output: false (Less than)
-console.log(a >= b); // Output: true (Greater than or equal to)
-console.log(a <= b); // Output: false (Less than or equal to)
+console.log(a == b); // Output: false (Equal to) checks for value equality with type coercion
+console.log(a != b); // Output: true (Not equal to) checks for value inequality with type coercion  
+console.log(a === b); // Output: false (Strict equal to) checks for value equality without type coercion
+console.log(a !== b); // Output: true (Strict not equal to) checks for value inequality without type coercion
+console.log(a > b); // Output: true (Greater than) checks if a is greater than b
+console.log(a < b); // Output: false (Less than) checks if a is less than b
+console.log(a >= b); // Output: true (Greater than or equal to) checks if a is greater than or equal to b
+console.log(a <= b); // Output: false (Less than or equal to) checks if a is less than or equal to b
 //More example of === 
 let val1 = 5;
 let val2 = "5";

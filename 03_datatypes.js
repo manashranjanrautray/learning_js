@@ -1,3 +1,6 @@
+//Primitive data types in JavaScript include string, number, boolean, null, undefined, symbol, and bigint.
+//JavaScript also has a special type called "object" which is used to store collections of data and more complex entities.
+
 // Example of using string type
 let firstname = "John Doe";
 console.log(typeof firstname); // Output: string
@@ -37,13 +40,6 @@ console.log(typeof emptyValue);
 let undefinedValue; // This variable is declared but not assigned a value, so it is undefined
 console.log(typeof undefinedValue); // Output: undefined
 
-// Example of using object type
-let person = {
-    name: "Alice",
-    age: 25
-};
-console.log(typeof person); // Output: object
-
 // Example of using symbol type
 let uniqueId = Symbol("id");
 console.log(typeof uniqueId); // Output: symbol
@@ -51,6 +47,13 @@ console.log(typeof uniqueId); // Output: symbol
 //Example of BigInt type (new to ES2020)
 let bigIntValue = 123n; // The 'n' at the end indicates that this is a BigInt irrespective of its size/length
 console.log(typeof bigIntValue); // Output: bigint
+
+// Example of using object type
+let person = {
+    name: "Alice",
+    age: 25
+};
+console.log(typeof person); // Output: object
 
 // JavaScript also has dynamic typing, which means that the type of a variable can change at runtime. For example:
 let dynamicVar = "I am a string";
@@ -113,5 +116,30 @@ let explicitBoolean = Boolean(0);
 console.log(explicitBoolean); // Output: false, because the number 0 is explicitly converted to a boolean using the Boolean() function, and 0 is a falsy value. 
 // In summary, type conversion in JavaScript can happen implicitly or explicitly, and it allows values to be converted from one type to another. Implicit type conversion is performed automatically by the JavaScript engine, while explicit type conversion is done manually by the developer using functions like String(), Number(), and Boolean(). Understanding how type conversion works can help prevent unexpected behavior in your code and improve its readability.
 
+//In JavaScript, you can also use the parseInt() and parseFloat() functions to convert strings to numbers. The parseInt() function parses a string and returns an integer, while the parseFloat() function parses a string and returns a floating-point number. Here are some examples:
+let integerString = "42";
+let parsedInteger = parseInt(integerString);
+console.log(parsedInteger); // Output: 42, because the string "42" is parsed as an integer using the parseInt() function.
+let floatString = "3.14";
+let parsedFloat = parseFloat(floatString);
+console.log(parsedFloat); // Output: 3.14, because the string "3.14" is parsed as a floating-point number using the parseFloat() function.
+// If the string cannot be parsed as a number, both parseInt() and parseFloat() will return NaN.
+let invalidIntegerString = "abc";   
+let invalidParsedInteger = parseInt(invalidIntegerString);
+console.log(invalidParsedInteger); // Output: NaN, because the string "abc" cannot be parsed as an integer using the parseInt() function.
+let invalidFloatString = "xyz";
+let invalidParsedFloat = parseFloat(invalidFloatString);
+console.log(invalidParsedFloat); // Output: NaN, because the string "xyz" cannot be parsed as a floating-point number using the parseFloat() function.  
+// In summary, the parseInt() and parseFloat() functions are useful for converting strings to numbers in JavaScript. They will return NaN if the string cannot be parsed as a valid number, so it's important to check for this case when using these functions in your code.
+// In addition to the built-in type conversion functions, JavaScript also provides a way to convert values to specific types using the unary plus operator (+). This operator can be used to convert a value to a number. For example:
+let stringValue = "123";
+let numberValue = +stringValue;
+console.log(numberValue); // Output: 123, because the unary plus operator converts the string "123" to a number.
+// If the string cannot be converted to a valid number, the unary plus operator will return NaN.
+let invalidStringValue = "abc";
+let invalidNumberValue = +invalidStringValue;
+console.log(invalidNumberValue); // Output: NaN, because the string "abc" cannot be converted to a valid number using the unary plus operator. 
+// In summary, the unary plus operator can be used as a shorthand for converting values to numbers in JavaScript. However, it's important to be cautious when using it, as it will return NaN if the value cannot be converted to a valid number.
+// In conclusion, understanding data types and type conversion in JavaScript is essential for writing effective and bug-free code. JavaScript has several built-in data types, including primitive types like string, number, boolean, null, undefined, symbol, and bigint, as well as the object type for more complex data structures. Type conversion can happen implicitly or explicitly, and it's important to be aware of how it works to avoid unexpected behavior in your code. By mastering data types and type conversion, you can write more robust and maintainable JavaScript applications.
 
 

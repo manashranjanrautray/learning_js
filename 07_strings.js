@@ -37,9 +37,14 @@ let replacedString = sampleString.replace("JavaScript", "World");
 console.log(replacedString); // Output: Hello, World!
 // Concatenating Strings
 let greeting = "Hello";
-let name = "Alice";
-let message = greeting + ", " + name + "!";
+let userName = "Alice";
+let message = greeting + ", " + userName + "!";
 console.log(message); // Output: Hello, Alice!
+
+//String Interpolation using Template Literals
+let interpolatedMessage = `${greeting}, ${userName}! Welcome to JavaScript.`;
+console.log(interpolatedMessage); // Output: Hello, Alice! Welcome to JavaScript.
+
 // Modifying Strings
 let originalString = "Hello, World!";
 let modifiedString = originalString.replace("World", "JavaScript");
