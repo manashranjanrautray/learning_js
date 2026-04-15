@@ -22,6 +22,7 @@ console.log(a > b); // Output: true (Greater than) checks if a is greater than b
 console.log(a < b); // Output: false (Less than) checks if a is less than b
 console.log(a >= b); // Output: true (Greater than or equal to) checks if a is greater than or equal to b
 console.log(a <= b); // Output: false (Less than or equal to) checks if a is less than or equal to b
+//! operators are used to negate a boolean value, while != and !== are used for inequality comparisons.
 //More example of === 
 let val1 = 5;
 let val2 = "5";

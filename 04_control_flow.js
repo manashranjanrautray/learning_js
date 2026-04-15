@@ -1,6 +1,8 @@
 // Control flow statements are essential for making decisions and performing repetitive tasks in JavaScript. They allow you to control the flow of your program based on certain conditions and to execute blocks of code multiple times, which is crucial for creating dynamic and interactive applications.
 
 // Conditional Statements
+// If statement - The if statement executes a block of code if a specified condition is true.
+// Else statement - The else statement executes a block of code if the specified condition is false.
 let age = 18;
 if (age >= 18) {
     console.log("You are an adult.");
@@ -24,7 +26,7 @@ if (score >= 90) {
 switch (true) {
     case score >= 90:
         console.log("Grade: A");
-        break;
+        break; // The break statement is used to exit the switch statement after a case has been executed. Without it, the code would continue to execute the next cases until it encounters a break or reaches the end of the switch statement.
     case score >= 80:
         console.log("Grade: B");
         break;
@@ -38,31 +40,28 @@ switch (true) {
         console.log("Grade: F");
 }    
 // Loops
-// For loop
-for (let i = 0; i < 5; i++) {
-    console.log(i); // Output: 0, 1, 2, 3, 4
-}
-// While loop
+// While loop - A while loop continues to execute a block of code as long as a specified condition is true. 
+// It is useful when the number of iterations is not known beforehand but the loop needs to run until a certain condition is met.
 let j = 0;
 while (j < 5) {
     console.log(j); // Output: 0, 1, 2, 3, 4
-    j++;
+    j++; //code to increment the value of j by 1 in each iteration to avoid an infinite loop
 }
 // Do...while loop
+// A do...while loop is similar to a while loop, 
+// but it guarantees that the block of code will be executed at least once, even if the condition is false.
 let k = 0;
 do {
     console.log(k); // Output: 0, 1, 2, 3, 4
     k++;
 } while (k < 5);
-// For...in loop (used for iterating over the properties of an object)
-let person = { name: "Alice", age: 30, city: "New York" };
-for (let key in person) {
-    console.log(key + ": " + person[key]);
-}
-// For...of loop (used for iterating over iterable objects like arrays)
-let numbers = [1, 2, 3, 4, 5];
-for (let number of numbers) {
-    console.log(number); // Output: 1, 2, 3, 4, 5
+
+
+// For loop
+// A for loop is a more concise way to write a loop that includes initialization, condition, and increment/decrement in a single line.
+// It is commonly used when the number of iterations is known beforehand.
+for (let i = 0; i < 5; i++) {
+    console.log(i); // Output: 0, 1, 2, 3, 4
 }
 
 //break statement is used to exit a loop or switch statement prematurely when a certain condition is met. It can be used in for, while, do...while loops, and switch statements.
@@ -80,6 +79,8 @@ for (let i = 0; i < 10; i++) {
     console.log(i); // Output: 0, 1, 2, 3, 4, 6, 7, 8, 9
 }
  
+
+
 
 
 

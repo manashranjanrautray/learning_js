@@ -28,7 +28,8 @@ let prop2 = "age";
 console.log(person[prop2]); // Output: 30
 let prop3 = "address";
 console.log(person[prop3]); // Output: undefined
-//Accessing properties iteratively
+
+// The for...in loop iterates over the enumerable properties of an object, allowing you to access both the property names (keys) and their corresponding values.
 for (let key in person) {
     if (person.hasOwnProperty(key)) {
         console.log(key + ": " + person[key]);
