@@ -3,16 +3,16 @@
 
 // Example of using string type
 let firstname = "John Doe";
-console.log(typeof firstname); // Output: string
+console.log(typeof(firstname)); // Output: string
 
 // Example of using number type
 let age = 30;
-console.log(typeof age);
+console.log(typeof(age));
 // Output: number
 
 // Example of using boolean type
 let isStudent = true;
-console.log(typeof isStudent); // Output: boolean
+console.log(typeof(isStudent)); // Output: boolean
 
 //Example of using Truthy and Falsy values
 let falsyValue = 0; // This is a falsy value
@@ -22,6 +22,7 @@ if (falsyValue) {
     console.log("This will be printed because falsyValue is falsy");
 }
 //list of falsy values in JavaScript: false, 0, -0, 0n (BigInt zero), "", null, undefined, and NaN. 
+
 // All other values are considered truthy.
 let truthyValue = "Hello"; // This is a truthy value
 if (truthyValue) {
@@ -29,7 +30,6 @@ if (truthyValue) {
 } else {
     console.log("This will not be printed because truthyValue is truthy");
 }
-
 
 // Example of using null type
 let emptyValue = null;
@@ -39,46 +39,6 @@ console.log(typeof emptyValue);
 // Example of using undefined type
 let undefinedValue; // This variable is declared but not assigned a value, so it is undefined
 console.log(typeof undefinedValue); // Output: undefined
-
-// Example of using symbol type
-let uniqueId = Symbol("id");
-console.log(typeof uniqueId); // Output: symbol
-
-//Example of BigInt type (new to ES2020)
-let bigIntValue = 123n; // The 'n' at the end indicates that this is a BigInt irrespective of its size/length
-console.log(typeof bigIntValue); // Output: bigint
-
-// Example of using object type
-let person = {
-    name: "Alice",
-    age: 25
-};
-console.log(typeof person); // Output: object
-
-// JavaScript also has dynamic typing, which means that the type of a variable can change at runtime. For example:
-let dynamicVar = "I am a string";
-console.log(typeof dynamicVar); // Output: string
-dynamicVar = 42; // Now dynamicVar is assigned a number
-console.log(typeof dynamicVar); // Output: number
-
-// In JavaScript, you can also use the instanceof operator to check if an object is an instance of a specific class or constructor function. For example:
-let date = new Date();
-console.log(date instanceof Date); // Output: true
-console.log(date instanceof Object); // Output: true, because all objects in JavaScript are instances of Object 
-// In summary, JavaScript has several built-in types, and you can use the typeof operator to check the type of a value. Additionally, JavaScript's dynamic typing allows variables to change types at runtime, and the instanceof operator can be used to check if an object is an instance of a specific class or constructor function.
-
-//Special Numbers in JavaScript
-
-// Example of Infinity
-let positiveInfinity = Infinity;
-console.log(positiveInfinity); // Output: Infinity
-let negativeInfinity = -Infinity;
-console.log(negativeInfinity); // Output: -Infinity
-// Infinity is a special numeric value that represents positive infinity. It is the result of dividing a positive number by zero or any operation that exceeds the maximum representable number in JavaScript.
-let divideByZero = 1 / 0;
-console.log(divideByZero); // Output: Infinity
-let largeNumber = Number.MAX_VALUE * 2;
-console.log(largeNumber); // Output: Infinity, because it exceeds the maximum representable number in JavaScript
 
 // Example of NaN (Not-a-Number)
 let notANumber = NaN;
@@ -97,9 +57,9 @@ console.log(Number.isNaN(NaN)); // Output: true, because NaN is the only value t
 console.log(Number.isNaN("hello")); // Output: false, because "hello" is not NaN, even though it cannot be converted to a number
 console.log(Number.isNaN(123)); // Output: false, because 123 is not NaN, even though it can be converted to a number
 
-//Explain Type conversion in JavaScript with examples
-// Type conversion, also known as type coercion, is the process of converting a value from one type to another. In JavaScript, type conversion can happen implicitly (automatically
-//by the JavaScript engine) or explicitly (manually by the developer). Here are some examples of both implicit and explicit type conversion in JavaScript:    
+// Type conversion, also known as type coercion, is the process of converting a value from one type to another. 
+// In JavaScript, type conversion can happen implicitly (automatically by the JavaScript engine) or explicitly (manually by the developer). 
+// Here are some examples of both implicit and explicit type conversion in JavaScript:    
 // Implicit type conversion
 let implicitString = "The answer is " + 42;
 console.log(implicitString); // Output: "The answer is 42", because the number 42 is implicitly converted to a string and concatenated with the other string.
@@ -142,4 +102,38 @@ console.log(invalidNumberValue); // Output: NaN, because the string "abc" cannot
 // In summary, the unary plus operator can be used as a shorthand for converting values to numbers in JavaScript. However, it's important to be cautious when using it, as it will return NaN if the value cannot be converted to a valid number.
 // In conclusion, understanding data types and type conversion in JavaScript is essential for writing effective and bug-free code. JavaScript has several built-in data types, including primitive types like string, number, boolean, null, undefined, symbol, and bigint, as well as the object type for more complex data structures. Type conversion can happen implicitly or explicitly, and it's important to be aware of how it works to avoid unexpected behavior in your code. By mastering data types and type conversion, you can write more robust and maintainable JavaScript applications.
 
+
+/**
+ * Below are advanced data types in JavaScript that are not as commonly used in everyday programming but are still important to understand. 
+ * These include the symbol type and the bigint type, which were introduced in newer versions of JavaScript (ES6 and ES2020, respectively).
+ * The symbol type is used to create unique identifiers for object properties, while the bigint type is used to represent integers that are larger than the maximum safe integer in JavaScript (2^53 - 1). However, these types are not commonly used in Playwright or general programming, but it's good to be aware of them for completeness.
+ */
+
+// Example of using symbol type but not much used in playwright and also in general programming
+let uniqueId = Symbol("id");
+console.log(typeof uniqueId); // Output: symbol
+
+//Example of BigInt type (new to ES2020) but not much used in playwright and also in general programming
+let bigIntValue = 123n; // The 'n' at the end indicates that this is a BigInt irrespective of its size/length
+console.log(typeof bigIntValue); // Output: bigint
+
+// Example of using object type.learn more on this in 13_oops.js
+let person = {
+    name: "Alice",
+    age: 25
+};
+console.log(typeof person); // Output: object  
+
+//Special Numbers in JavaScript
+
+// Example of Infinity
+let positiveInfinity = Infinity;
+console.log(positiveInfinity); // Output: Infinity
+let negativeInfinity = -Infinity;
+console.log(negativeInfinity); // Output: -Infinity
+// Infinity is a special numeric value that represents positive infinity. It is the result of dividing a positive number by zero or any operation that exceeds the maximum representable number in JavaScript.
+let divideByZero = 1 / 0;
+console.log(divideByZero); // Output: Infinity
+let largeNumber = Number.MAX_VALUE * 2;
+console.log(largeNumber); // Output: Infinity, because it exceeds the maximum representable number in JavaScript
 
