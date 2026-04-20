@@ -117,7 +117,7 @@ console.log(typeof uniqueId); // Output: symbol
 let bigIntValue = 123n; // The 'n' at the end indicates that this is a BigInt irrespective of its size/length
 console.log(typeof bigIntValue); // Output: bigint
 
-// Example of using object type.learn more on this in 13_oops.js
+// Example of using object type.learn more on this in objects and oops section but just to show you that it is a data type in JavaScript.
 let person = {
     name: "Alice",
     age: 25

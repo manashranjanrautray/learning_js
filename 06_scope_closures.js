@@ -1,17 +1,33 @@
-//Example of different scopes in JavaScript like global scope, function scope, and block scope with let,var and const
-//Global scope means that the variable is accessible from anywhere in the code applicable to let, var and const
-//Function scope means that the variable is only accessible within the function it is declared in and applicable to var and not to let and const
-//Block scope means that the variable is only accessible within the block i.e. code sorrounded by {} it is declared in
-//and applicable to let and const and not to var
+/**
+ * Hoisting
+ * Global Scope
+ * Function Scope
+ * Block Scope
+ * Lexical Scope
+ * Closures
+ */
 
-//Global scope
+//Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compilation phase.
+//This means that you can use variables and functions before they are declared in the code, but it can lead to unexpected behavior if not used carefully.
 
+console.log(hoistedVar); // Output: undefined (due to hoisting, the declaration is moved to the top but not the assignment)
+var hoistedVar = "I am hoisted";
+
+
+//Global scope is the outermost scope in JavaScript. 
+// Variables declared in the global scope i.e. on file level are accessible from anywhere in the code, including inside functions and blocks.
+//Global scope is applicable to variables declared with var, let, and const.
 var globalVar = "I am a global variable";
 let globalLet = "I am also a global variable";
 const globalConst = "I am a global constant";
 
 function exampleFunction() {
-    //Function scope
+    //Function scope is the scope created by a function. 
+    // Variables declared within a function are only accessible within that function and its nested functions.
+    //Function scope is applicable to variables declared with var, let, and const.
+    // Although var is function-scoped, let and const are block-scoped, 
+    // meaning they are only accessible within the block they are defined in (e.g., inside an if statement or a loop).
+
     var functionVar = "I am a function variable";
     let functionLet = "I am also a function variable";
     const functionConst = "I am a function constant";
@@ -22,7 +38,9 @@ function exampleFunction() {
     console.log(functionLet); // Accessible due to block scope within the function
     console.log(functionConst); // Accessible due to block scope within the function
 }
+
 exampleFunction(); 
+
 console.log(globalVar); // Accessible due to global scope
 console.log(globalLet); // Accessible due to global scope   
 console.log(globalConst); // Accessible due to global scope
@@ -36,7 +54,7 @@ if (true) {
     var blockVar = "I am a block var";
     let blockLet = "I am a block let";
     const blockConst = "I am a block constant";
-    console.log(blockVar); // Accessible due to var's function scope
+    console.log(blockVar); // Accessible due to var's function scope and since if block is not a function, blockVar is accessible within the block
     console.log(blockLet); // Accessible due to block scope
     console.log(blockConst); // Accessible due to block scope
 }

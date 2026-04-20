@@ -174,6 +174,32 @@ for (let i = 0; i < fruits.length; i++) {
 
 let allFruitsStringForLoop = accumulator;
 
+// Array destructuring - Extracting values from arrays into variables
+// The usecase for this is when you want to assign elements of an array to individual variables in a concise and readable way.
+// For example, if we want to extract the first two fruits from the fruits array into separate variables:
+// The syntax for array destructuring is: let [variable1, variable2, ...] = array;
+let [firstFruit, secondFruit] = fruits;
+console.log(firstFruit); // Output: Apricot
+console.log(secondFruit); // Output: Blueberry
+
+
+// spread operator - Another way to merge arrays
+// The usecase for this is when you want to create a new array that combines the elements of multiple arrays in a concise and readable way.
+// The spread operator (...) allows you to expand the elements of an array into individual elements.
+// For example, if we want to merge the fruits array with another array of fruits using the spread operator:
+// The following code creates a new array called allFruitsSpread that contains all the elements from the fruits array followed by all the elements from the moreFruits array:
+let allFruitsSpread = [...fruits, ...moreFruits];
+console.log(allFruitsSpread); // Output: ['Apricot', 'Blueberry', 'Cherry', 'Elderberry', 'Fig']
+
+//This is opposite of rest parameters, which allows you to collect multiple elements into an array. 
+//The spread operator allows you to expand an array into individual elements, 
+// while rest parameters allow you to collect individual elements into an array.
+//Example of rest parameters:
+function collectFruits(...fruits) {
+    return fruits;
+}
+console.log(collectFruits('Apple', 'Banana', 'Cherry')); // Output: ['Apple', 'Banana', 'Cherry']
+
 
 // find() - Returns the value of the first element in the array that satisfies the provided testing function
 let foundFruit = fruits.find(fruit => fruit.startsWith('B'));
@@ -197,14 +223,9 @@ let moreFruits = ['Elderberry', 'Fig'];
 let allFruits = fruits.concat(moreFruits);
 console.log(allFruits); // Output: ['Apricot', 'Blueberry', 'Cherry', 'Elderberry', 'Fig']
 
-// spread operator - Another way to merge arrays
-let allFruitsSpread = [...fruits, ...moreFruits];
-console.log(allFruitsSpread); // Output: ['Apricot', 'Blueberry', 'Cherry', 'Elderberry', 'Fig']
 
-// Array destructuring - Extracting values from arrays into variables
-let [firstFruit, secondFruit] = fruits;
-console.log(firstFruit); // Output: Apricot
-console.log(secondFruit); // Output: Blueberry
+
+
 
 // Nested arrays - Arrays can contain other arrays
 let nestedArray = [[1, 2], [3, 4], [5, 6]];

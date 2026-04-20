@@ -15,12 +15,15 @@ let person = {
         console.log("Hello, my name is " + this.name);
     }
 };
+
 // Accessing Object Properties
 console.log(person.name); // Output: Alice
 console.log(person["age"]); // Output: 30
 person.greet(); // Output: Hello, my name is Alice
+
 //Accessing non-existent property
 console.log(person.address); // Output: undefined
+
 //Accessing properties with variables
 let prop = "name";
 console.log(person[prop]); // Output: Alice
@@ -52,7 +55,6 @@ let obj1 = { key: "value" };
 let obj2 = { key: "value" };
 console.log(obj1 === obj2); // Output: false (different references)
 console.log(JSON.stringify(obj1) === JSON.stringify(obj2)); // Output: true (same content)
-console.log(obj1 == obj2); // Output: false (different references)
 let obj3 = obj1; // obj3 references the same object as obj1
 console.log(obj1 === obj3); // Output: true (same reference)
 
